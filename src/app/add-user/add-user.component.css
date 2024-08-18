@@ -1,0 +1,124 @@
+#admin{
+  color:#2E5D9F;
+}
+
+/* Vertical Navbar */
+.vertical-nav {
+  width: 195px;
+  height: 900px;
+  background-color: #ffffff;
+  color: white;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.vertical-nav .nav-link {
+  color: white;
+  padding: 10px 0;
+}
+
+.vertical-nav .nav-link.active {
+  font-weight: bold;
+}
+
+/* Horizontal Navbar */
+
+
+
+
+.content {
+  margin-left: 195px; /* Offset for the vertical navbar */
+   /* Offset for the horizontal navbar */
+  width: calc(100% - 195px); /* Adjust content width based on navbar */
+}
+#pages{
+  color:#6B6E7F;
+  margin-top: -375px;
+  font-size:  22.5px;
+}
+#users{
+  width: 878px;
+  height: 49px;
+  background-color:#CDECF7;
+  margin-top: -675px;
+  border-radius: 10%;
+}
+#u{
+  color: black;
+  text-align: center;
+  align-content: center;
+  margin-top: 10px;
+  font-size: 18px;
+}
+#user_management{
+font-size: 24px;
+  color: #495057;
+}
+#home{
+  margin-top: -92px;
+}
+#pag\ user{
+  margin-top: -68px;
+  margin-left: 230px;
+
+}
+#pag\ add\ user{
+  margin-top: -39px;
+  margin-left: 275px;
+  color: #989BA5;
+}
+p#pag\ user{
+  text-decoration-color :#989BA5;
+
+}
+#pag\ user a{
+  text-decoration: none;
+  color: #989BA5;
+}
+div.form-group{
+  background-color: #CDECF7;
+  border-radius: 5%;
+  width: 35%;
+  height: 40%;
+  padding: 5%;
+  margin-left: 20%;
+  margin-bottom: 80px;
+}
+.text-center{
+  color: #6B6E7F;
+  text-align: center;
+  font-size: 24px;
+  margin-top: -10%;
+}
+#file{
+  border-radius: 50%;
+  width: 100px;  /* Set the width */
+  height: 100px;
+  background-color: #06A3DA;
+  text-decoration: none;
+  outline: none;
+  border: 2px solid #3498db;
+  margin-left: 35%;
+  background-color: #06A3DA;
+}
+#labelfile{
+  margin-left: 40%;
+}
+#addB{
+  background-color: #06A3DA;
+  text-decoration: white;
+  color: white;
+  border: none;
+  border-radius: 20%;
+  height: 30%;
+  width: 40%;
+  margin-left: 30%;
+  margin-top: 4%;
+
+}
+#ver{
+  margin-left: 90%;
+  margin-top: -38px;
+}

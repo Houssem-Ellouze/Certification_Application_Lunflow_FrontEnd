@@ -1,0 +1,55 @@
+<div class="d-flex">
+  <!-- Vertical Navbar -->
+
+  <nav class="vertical-nav navbar navbar-expand-lg navbar-light bg-light">
+
+
+
+    <div id="users">
+      <h4 id="u">Users</h4>
+    </div>
+
+    <!-- Add your vertical nav items here -->
+  </nav>
+
+  <div class="content flex-grow-1">
+    <!-- Horizontal Navbar -->
+    <nav class="horizontal-nav navbar navbar-expand-lg navbar-light bg-light">
+      <img ngSrc="https://www.lunflow.com/assets/img/imageHomePage/LunflowFichier-1.png" width="280" height="80" class="img-fluid" alt="Lunflow Image" priority>
+      <img ngSrc="https://s3.eu-west-3.amazonaws.com/moovijob.prod/2758678/conversions/logo-cible-thumb.jpg" width="20" height="20" class="img-fluid" alt="Small Image" priority>
+      <h2 id="admin" class="ml-3">Admin Template</h2>
+      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- Add additional nav items here if needed -->
+      </div>
+    </nav>
+    <div>
+      <p id="user_management">User Management</p>
+      <svg xmlns="http://www.w3.org/2000/svg" width="420" height="16"  fill="currentColor" class="bi bi-house" id="home" viewBox="0 0 16 16">
+        <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+      </svg>
+      <p id="pag user"><a href="/display-user">Users</a></p>
+      <p id="pag add user" style="color: #6B6E7F">. Delete User</p>
+
+    </div>
+    <!-- User Form -->
+    <div>
+      <form (ngSubmit)="deleteUser()">
+        <div class="form-group">
+          <h1 class="text-center">Delete User</h1>
+          <br>
+        <label for="userId">User ID:</label>
+        <input id="userId" [(ngModel)]="userId" name="userId" class="form-control" required>
+        <br>
+        <button type="submit" id="addB">Delete</button>
+        </div>
+        <p>Lunflow &copy; 2024 . Admin Template.</p>
+        <p id="ver">Version 1.2.3.4</p>
+      </form>
+      <p *ngIf="message">{{ message }}</p>
+    </div>
+
+  </div>
+</div>

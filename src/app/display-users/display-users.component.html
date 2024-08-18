@@ -1,0 +1,72 @@
+<div class="d-flex">
+  <!-- Vertical Navbar -->
+  <nav class="vertical-nav navbar navbar-expand-lg navbar-light bg-light">
+    <div id="users">
+      <h4 id="u">Users</h4>
+    </div>
+    <!-- Add your vertical nav items here -->
+  </nav>
+  <div class="content flex-grow-1">
+    <!-- Horizontal Navbar -->
+    <nav class="horizontal-nav navbar navbar-expand-lg navbar-light bg-light">
+      <img ngSrc="https://www.lunflow.com/assets/img/imageHomePage/LunflowFichier-1.png" width="280" height="80" class="img-fluid" alt="Lunflow Image" priority>
+      <img ngSrc="https://s3.eu-west-3.amazonaws.com/moovijob.prod/2758678/conversions/logo-cible-thumb.jpg" width="20" height="20" class="img-fluid" alt="Small Image" priority>
+      <h2 id="admin" class="ml-3">Admin Template</h2>
+      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- Add additional nav items here if needed -->
+      </div>
+    </nav>
+<div class="container-fluid">
+  <!-- Main Content Area -->
+  <div class="col-12 col-md-10 main-content">
+    <div *ngIf="users.length > 0; else noUsers" class="table-responsive">
+
+      <div class="d-flex justify-content-between mb-3">
+        <button class="btn btn-primary">
+          <a routerLink="/add-user" class="text-white text-decoration-none">Add User</a>
+        </button>
+        <button class="btn btn-danger" (click)="onLogout()">Logout</button>
+      </div>
+
+      <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+        <tr>
+          <th class="text-left">Name</th>
+          <th class="text-left">Email</th>
+          <th class="text-center">File Details</th>
+          <th class="text-center">Operations</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let user of users">
+          <td class="text-left align-middle">{{ user.name }}</td>
+          <td class="text-left align-middle">{{ user.email }}</td>
+          <td class="text-center align-middle">
+            <button class="btn btn-info" *ngIf="user.verificationLink">
+              <a [href]="user.verificationLink" target="_blank" class="text-white text-decoration-none">View Details</a>
+            </button>
+            <span *ngIf="!user.verificationLink">No link available</span>
+          </td>
+          <td class="text-center align-middle">
+            <button class="btn btn-secondary">
+              <a [routerLink]="['/update-user', user.id]" class="text-white text-decoration-none">Update</a>
+            </button>
+            <button class="btn btn-danger">
+              <a [routerLink]="['/delete-user', user.id]" class="text-white text-decoration-none">Delete</a>
+            </button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+
+    </div>
+    <ng-template #noUsers>
+      <p>No users available.</p>
+    </ng-template>
+    <p>Lunflow &copy; 2024 . Admin Template.</p>
+    <p id="ver">Version 1.2.3.4</p>
+  </div>
+</div>

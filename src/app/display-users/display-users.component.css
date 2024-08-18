@@ -1,0 +1,84 @@
+#admin{
+  color:#2E5D9F;
+}
+
+/* Vertical Navbar */
+.vertical-nav {
+  width: 195px;
+  height: 900px;
+  background-color: #ffffff;
+  color: white;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.vertical-nav .nav-link {
+  color: white;
+  padding: 10px 0;
+}
+
+.vertical-nav .nav-link.active {
+  font-weight: bold;
+}
+
+/* Horizontal Navbar */
+
+
+
+
+.content {
+  margin-left: 195px; /* Offset for the vertical navbar */
+  /* Offset for the horizontal navbar */
+  width: calc(100% - 195px); /* Adjust content width based on navbar */
+}
+#pages{
+  color:#6B6E7F;
+  margin-top: -375px;
+  font-size:  22.5px;
+}
+#users{
+  width: 878px;
+  height: 49px;
+  background-color:#CDECF7;
+  margin-top: -675px;
+  border-radius: 10%;
+}
+#u{
+  color: black;
+  text-align: center;
+  align-content: center;
+  margin-top: 10px;
+  font-size: 18px;
+}
+#user_management{
+  font-size: 24px;
+  color: #495057;
+}
+#home{
+  margin-top: -92px;
+}
+#pag\ user{
+  margin-top: -68px;
+  margin-left: 230px;
+
+}
+#pag\ add\ user{
+  margin-top: -39px;
+  margin-left: 275px;
+  color: #989BA5;
+}
+p#pag\ user{
+  text-decoration-color :#989BA5;
+
+}
+#pag\ user a{
+  text-decoration: none;
+  color: #989BA5;
+}
+
+#ver{
+  margin-left: 90%;
+  margin-top: -38px;
+}
